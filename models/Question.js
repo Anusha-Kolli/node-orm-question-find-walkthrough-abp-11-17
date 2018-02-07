@@ -32,6 +32,10 @@ class Question{
   static Find(id){
     const sql = `SELECT * FROM questions where id=?`
     return new Promise(function(resolve){
+      db.get(sql,[id],function(err,resluts){
+        const question = new Question
+        question.id=results.id
+      })
       resolve("hello")
     })
   }
