@@ -35,7 +35,7 @@ class Question{
       db.get(sql,[id],function(err,resluts){
         const question = new Question(result.content)
         question.id=results.id
-          resolve(QUESTION)
+          resolve(question)
       })
 
     })
